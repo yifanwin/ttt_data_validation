@@ -1,0 +1,2572 @@
+{
+  "rule": "exclude source archive entries whose house_index is in benchmark house set; conservative house-level holdout",
+  "benchmark_episodes": 2000,
+  "benchmark_house_indices": [
+    0,
+    2,
+    4,
+    5,
+    10,
+    11,
+    13,
+    15,
+    17,
+    18,
+    21,
+    23,
+    25,
+    26,
+    27,
+    29,
+    32,
+    33,
+    34,
+    36,
+    38,
+    39,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    52,
+    53,
+    56,
+    57,
+    58,
+    60,
+    64,
+    65,
+    67,
+    68,
+    71,
+    72,
+    73,
+    75,
+    76,
+    77,
+    78,
+    79,
+    82,
+    83,
+    85,
+    86,
+    87,
+    88,
+    90,
+    91,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    100,
+    101,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    119,
+    121,
+    124,
+    125,
+    126,
+    128,
+    129,
+    131,
+    132,
+    133,
+    135,
+    137,
+    138,
+    139,
+    140,
+    143,
+    144,
+    147,
+    148,
+    149,
+    150,
+    152,
+    153,
+    154,
+    155,
+    156,
+    158,
+    159,
+    160,
+    162,
+    164,
+    165,
+    167,
+    169,
+    170,
+    171,
+    172,
+    176,
+    177,
+    178,
+    179,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    191,
+    194,
+    195,
+    197,
+    198,
+    200,
+    201,
+    203,
+    204,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    224,
+    225,
+    228,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    239,
+    240,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    251,
+    253,
+    254,
+    256,
+    258,
+    259,
+    260,
+    261,
+    262,
+    264,
+    265,
+    266,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    280,
+    282,
+    285,
+    286,
+    288,
+    292,
+    293,
+    295,
+    297,
+    300,
+    302,
+    303,
+    305,
+    306,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    325,
+    330,
+    334,
+    335,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    358,
+    359,
+    360,
+    363,
+    367,
+    368,
+    369,
+    370,
+    372,
+    373,
+    374,
+    375,
+    376,
+    378,
+    379,
+    385,
+    386,
+    387,
+    388,
+    390,
+    391,
+    394,
+    396,
+    397,
+    398,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    413,
+    414,
+    415,
+    416,
+    420,
+    421,
+    424,
+    426,
+    427,
+    428,
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    437,
+    439,
+    440,
+    441,
+    443,
+    444,
+    445,
+    446,
+    447,
+    449,
+    451,
+    452,
+    453,
+    455,
+    457,
+    459,
+    460,
+    464,
+    466,
+    467,
+    468,
+    469,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    480,
+    481,
+    482,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    494,
+    495,
+    496,
+    497,
+    500,
+    501,
+    504,
+    505,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    516,
+    518,
+    519,
+    520,
+    521,
+    522,
+    525,
+    526,
+    527,
+    528,
+    529,
+    532,
+    533,
+    534,
+    536,
+    537,
+    538,
+    542,
+    543,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    552,
+    557,
+    560,
+    561,
+    566,
+    567,
+    572,
+    573,
+    574,
+    575,
+    577,
+    578,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    589,
+    591,
+    594,
+    597,
+    598,
+    600,
+    601,
+    602,
+    604,
+    605,
+    606,
+    607,
+    608,
+    610,
+    614,
+    615,
+    616,
+    617,
+    618,
+    622,
+    624,
+    626,
+    627,
+    628,
+    629,
+    630,
+    631,
+    632,
+    633,
+    634,
+    635,
+    637,
+    638,
+    639,
+    640,
+    641,
+    643,
+    646,
+    647,
+    648,
+    650,
+    651,
+    652,
+    654,
+    655,
+    657,
+    658,
+    659,
+    660,
+    662,
+    663,
+    664,
+    665,
+    666,
+    668,
+    669,
+    672,
+    674,
+    675,
+    676,
+    677,
+    678,
+    679,
+    680,
+    681,
+    684,
+    685,
+    693,
+    694,
+    695,
+    696,
+    698,
+    699,
+    700,
+    704,
+    706,
+    707,
+    709,
+    714,
+    715,
+    717,
+    718,
+    719,
+    720,
+    721,
+    724,
+    726,
+    727,
+    729,
+    730,
+    732,
+    733,
+    735,
+    736,
+    737,
+    738,
+    740,
+    741,
+    742,
+    744,
+    746,
+    748,
+    749,
+    751,
+    752,
+    755,
+    756,
+    757,
+    762,
+    763,
+    764,
+    765,
+    766,
+    768,
+    770,
+    771,
+    774,
+    775,
+    777,
+    779,
+    780,
+    781,
+    783,
+    784,
+    786,
+    788,
+    789,
+    790,
+    791,
+    792,
+    793,
+    795,
+    796,
+    799,
+    803,
+    804,
+    805,
+    806,
+    807,
+    808,
+    809,
+    811,
+    816,
+    817,
+    821,
+    825,
+    828,
+    830,
+    831,
+    832,
+    833,
+    834,
+    836,
+    837,
+    838,
+    841,
+    843,
+    844,
+    845,
+    847,
+    848,
+    849,
+    850,
+    851,
+    852,
+    854,
+    855,
+    856,
+    860,
+    861,
+    862,
+    864,
+    865,
+    866,
+    867,
+    868,
+    871,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    886,
+    887,
+    889,
+    890,
+    891,
+    893,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    911,
+    913,
+    915,
+    916,
+    917,
+    918,
+    920,
+    921,
+    922,
+    923,
+    924,
+    925,
+    926,
+    927,
+    932,
+    933,
+    935,
+    937,
+    938,
+    939,
+    941,
+    942,
+    946,
+    947,
+    951,
+    952,
+    954,
+    959,
+    960,
+    961,
+    963,
+    967,
+    968,
+    970,
+    971,
+    973,
+    974,
+    975,
+    978,
+    979,
+    982,
+    983,
+    985,
+    986,
+    988,
+    991,
+    993,
+    995,
+    996,
+    997,
+    998,
+    999
+  ],
+  "source_overlap": {
+    "RBY1PickAndPlaceDataGenConfig": {
+      "house_count": 78,
+      "archive_entry_count": 83,
+      "entries": [
+        {
+          "entry_index": 35,
+          "house_index": 109,
+          "shard_id": 1,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_109.tar.zst"
+        },
+        {
+          "entry_index": 88,
+          "house_index": 133,
+          "shard_id": 1,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_133.tar.zst"
+        },
+        {
+          "entry_index": 257,
+          "house_index": 208,
+          "shard_id": 3,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_208.tar.zst"
+        },
+        {
+          "entry_index": 322,
+          "house_index": 239,
+          "shard_id": 3,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_239.tar.zst"
+        },
+        {
+          "entry_index": 397,
+          "house_index": 277,
+          "shard_id": 4,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_277.tar.zst"
+        },
+        {
+          "entry_index": 507,
+          "house_index": 322,
+          "shard_id": 5,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_322.tar.zst"
+        },
+        {
+          "entry_index": 695,
+          "house_index": 409,
+          "shard_id": 6,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_409.tar.zst"
+        },
+        {
+          "entry_index": 913,
+          "house_index": 508,
+          "shard_id": 8,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_508.tar.zst"
+        },
+        {
+          "entry_index": 1046,
+          "house_index": 581,
+          "shard_id": 9,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_581.tar.zst"
+        },
+        {
+          "entry_index": 1590,
+          "house_index": 852,
+          "shard_id": 13,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_852.tar.zst"
+        },
+        {
+          "entry_index": 1650,
+          "house_index": 88,
+          "shard_id": 14,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_88.tar.zst"
+        },
+        {
+          "entry_index": 1731,
+          "house_index": 917,
+          "shard_id": 14,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_917.tar.zst"
+        },
+        {
+          "entry_index": 1837,
+          "house_index": 959,
+          "shard_id": 15,
+          "part": 1,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_959.tar.zst"
+        },
+        {
+          "entry_index": 1971,
+          "house_index": 133,
+          "shard_id": 17,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_133.tar.zst"
+        },
+        {
+          "entry_index": 2019,
+          "house_index": 159,
+          "shard_id": 17,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_159.tar.zst"
+        },
+        {
+          "entry_index": 2033,
+          "house_index": 164,
+          "shard_id": 18,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_164.tar.zst"
+        },
+        {
+          "entry_index": 2143,
+          "house_index": 222,
+          "shard_id": 18,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_222.tar.zst"
+        },
+        {
+          "entry_index": 2520,
+          "house_index": 433,
+          "shard_id": 21,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_433.tar.zst"
+        },
+        {
+          "entry_index": 2757,
+          "house_index": 557,
+          "shard_id": 23,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_557.tar.zst"
+        },
+        {
+          "entry_index": 2805,
+          "house_index": 583,
+          "shard_id": 23,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_583.tar.zst"
+        },
+        {
+          "entry_index": 2852,
+          "house_index": 606,
+          "shard_id": 24,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_606.tar.zst"
+        },
+        {
+          "entry_index": 2944,
+          "house_index": 651,
+          "shard_id": 24,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_651.tar.zst"
+        },
+        {
+          "entry_index": 2965,
+          "house_index": 662,
+          "shard_id": 24,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_662.tar.zst"
+        },
+        {
+          "entry_index": 2971,
+          "house_index": 666,
+          "shard_id": 24,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_666.tar.zst"
+        },
+        {
+          "entry_index": 3193,
+          "house_index": 784,
+          "shard_id": 26,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_784.tar.zst"
+        },
+        {
+          "entry_index": 3237,
+          "house_index": 811,
+          "shard_id": 26,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_811.tar.zst"
+        },
+        {
+          "entry_index": 3298,
+          "house_index": 841,
+          "shard_id": 27,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_841.tar.zst"
+        },
+        {
+          "entry_index": 3396,
+          "house_index": 896,
+          "shard_id": 28,
+          "part": 2,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_896.tar.zst"
+        },
+        {
+          "entry_index": 3646,
+          "house_index": 103,
+          "shard_id": 30,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_103.tar.zst"
+        },
+        {
+          "entry_index": 3701,
+          "house_index": 112,
+          "shard_id": 30,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_112.tar.zst"
+        },
+        {
+          "entry_index": 3913,
+          "house_index": 140,
+          "shard_id": 31,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_140.tar.zst"
+        },
+        {
+          "entry_index": 3984,
+          "house_index": 149,
+          "shard_id": 32,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_149.tar.zst"
+        },
+        {
+          "entry_index": 4058,
+          "house_index": 159,
+          "shard_id": 32,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_159.tar.zst"
+        },
+        {
+          "entry_index": 4328,
+          "house_index": 197,
+          "shard_id": 34,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_197.tar.zst"
+        },
+        {
+          "entry_index": 4413,
+          "house_index": 209,
+          "shard_id": 35,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_209.tar.zst"
+        },
+        {
+          "entry_index": 4422,
+          "house_index": 210,
+          "shard_id": 35,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_210.tar.zst"
+        },
+        {
+          "entry_index": 4503,
+          "house_index": 222,
+          "shard_id": 35,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_222.tar.zst"
+        },
+        {
+          "entry_index": 4604,
+          "house_index": 235,
+          "shard_id": 36,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_235.tar.zst"
+        },
+        {
+          "entry_index": 4662,
+          "house_index": 245,
+          "shard_id": 36,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_245.tar.zst"
+        },
+        {
+          "entry_index": 4682,
+          "house_index": 248,
+          "shard_id": 36,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_248.tar.zst"
+        },
+        {
+          "entry_index": 4888,
+          "house_index": 278,
+          "shard_id": 38,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_278.tar.zst"
+        },
+        {
+          "entry_index": 4904,
+          "house_index": 280,
+          "shard_id": 38,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_280.tar.zst"
+        },
+        {
+          "entry_index": 5061,
+          "house_index": 302,
+          "shard_id": 39,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_302.tar.zst"
+        },
+        {
+          "entry_index": 5597,
+          "house_index": 385,
+          "shard_id": 42,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_385.tar.zst"
+        },
+        {
+          "entry_index": 5922,
+          "house_index": 43,
+          "shard_id": 44,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_43.tar.zst"
+        },
+        {
+          "entry_index": 5942,
+          "house_index": 433,
+          "shard_id": 44,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_433.tar.zst"
+        },
+        {
+          "entry_index": 6089,
+          "house_index": 451,
+          "shard_id": 45,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_451.tar.zst"
+        },
+        {
+          "entry_index": 6204,
+          "house_index": 468,
+          "shard_id": 46,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_468.tar.zst"
+        },
+        {
+          "entry_index": 6209,
+          "house_index": 469,
+          "shard_id": 46,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_469.tar.zst"
+        },
+        {
+          "entry_index": 6253,
+          "house_index": 474,
+          "shard_id": 46,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_474.tar.zst"
+        },
+        {
+          "entry_index": 6305,
+          "house_index": 480,
+          "shard_id": 47,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_480.tar.zst"
+        },
+        {
+          "entry_index": 6476,
+          "house_index": 504,
+          "shard_id": 48,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_504.tar.zst"
+        },
+        {
+          "entry_index": 6684,
+          "house_index": 534,
+          "shard_id": 49,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_534.tar.zst"
+        },
+        {
+          "entry_index": 6702,
+          "house_index": 536,
+          "shard_id": 49,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_536.tar.zst"
+        },
+        {
+          "entry_index": 6714,
+          "house_index": 538,
+          "shard_id": 49,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_538.tar.zst"
+        },
+        {
+          "entry_index": 6737,
+          "house_index": 542,
+          "shard_id": 49,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_542.tar.zst"
+        },
+        {
+          "entry_index": 6848,
+          "house_index": 560,
+          "shard_id": 50,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_560.tar.zst"
+        },
+        {
+          "entry_index": 6926,
+          "house_index": 572,
+          "shard_id": 51,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_572.tar.zst"
+        },
+        {
+          "entry_index": 6935,
+          "house_index": 573,
+          "shard_id": 51,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_573.tar.zst"
+        },
+        {
+          "entry_index": 6990,
+          "house_index": 58,
+          "shard_id": 51,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_58.tar.zst"
+        },
+        {
+          "entry_index": 7102,
+          "house_index": 597,
+          "shard_id": 52,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_597.tar.zst"
+        },
+        {
+          "entry_index": 7153,
+          "house_index": 605,
+          "shard_id": 52,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_605.tar.zst"
+        },
+        {
+          "entry_index": 7370,
+          "house_index": 632,
+          "shard_id": 54,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_632.tar.zst"
+        },
+        {
+          "entry_index": 7418,
+          "house_index": 639,
+          "shard_id": 54,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_639.tar.zst"
+        },
+        {
+          "entry_index": 7491,
+          "house_index": 650,
+          "shard_id": 54,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_650.tar.zst"
+        },
+        {
+          "entry_index": 7498,
+          "house_index": 651,
+          "shard_id": 54,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_651.tar.zst"
+        },
+        {
+          "entry_index": 7505,
+          "house_index": 652,
+          "shard_id": 54,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_652.tar.zst"
+        },
+        {
+          "entry_index": 7552,
+          "house_index": 659,
+          "shard_id": 55,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_659.tar.zst"
+        },
+        {
+          "entry_index": 7703,
+          "house_index": 679,
+          "shard_id": 56,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_679.tar.zst"
+        },
+        {
+          "entry_index": 7901,
+          "house_index": 709,
+          "shard_id": 57,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_709.tar.zst"
+        },
+        {
+          "entry_index": 8139,
+          "house_index": 744,
+          "shard_id": 59,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_744.tar.zst"
+        },
+        {
+          "entry_index": 8357,
+          "house_index": 777,
+          "shard_id": 60,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_777.tar.zst"
+        },
+        {
+          "entry_index": 8619,
+          "house_index": 817,
+          "shard_id": 62,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_817.tar.zst"
+        },
+        {
+          "entry_index": 8641,
+          "house_index": 821,
+          "shard_id": 62,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_821.tar.zst"
+        },
+        {
+          "entry_index": 8856,
+          "house_index": 85,
+          "shard_id": 63,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_85.tar.zst"
+        },
+        {
+          "entry_index": 9016,
+          "house_index": 87,
+          "shard_id": 64,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_87.tar.zst"
+        },
+        {
+          "entry_index": 9127,
+          "house_index": 887,
+          "shard_id": 65,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_887.tar.zst"
+        },
+        {
+          "entry_index": 9241,
+          "house_index": 903,
+          "shard_id": 66,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_903.tar.zst"
+        },
+        {
+          "entry_index": 9269,
+          "house_index": 907,
+          "shard_id": 66,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_907.tar.zst"
+        },
+        {
+          "entry_index": 9481,
+          "house_index": 937,
+          "shard_id": 67,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_937.tar.zst"
+        },
+        {
+          "entry_index": 9498,
+          "house_index": 94,
+          "shard_id": 67,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_94.tar.zst"
+        },
+        {
+          "entry_index": 9589,
+          "house_index": 954,
+          "shard_id": 68,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_954.tar.zst"
+        },
+        {
+          "entry_index": 9777,
+          "house_index": 979,
+          "shard_id": 69,
+          "part": 3,
+          "archive_path": "RBY1PickAndPlaceDataGenConfig_house_979.tar.zst"
+        }
+      ]
+    },
+    "RBY1PickDataGenConfig": {
+      "house_count": 173,
+      "archive_entry_count": 189,
+      "entries": [
+        {
+          "entry_index": 117,
+          "house_index": 821,
+          "shard_id": 0,
+          "part": 0,
+          "archive_path": "RBY1PickDataGenConfig_house_821.tar.zst"
+        },
+        {
+          "entry_index": 403,
+          "house_index": 160,
+          "shard_id": 2,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_160.tar.zst"
+        },
+        {
+          "entry_index": 452,
+          "house_index": 17,
+          "shard_id": 3,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_17.tar.zst"
+        },
+        {
+          "entry_index": 589,
+          "house_index": 204,
+          "shard_id": 4,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_204.tar.zst"
+        },
+        {
+          "entry_index": 797,
+          "house_index": 260,
+          "shard_id": 6,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_260.tar.zst"
+        },
+        {
+          "entry_index": 819,
+          "house_index": 264,
+          "shard_id": 6,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_264.tar.zst"
+        },
+        {
+          "entry_index": 1143,
+          "house_index": 340,
+          "shard_id": 8,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_340.tar.zst"
+        },
+        {
+          "entry_index": 1307,
+          "house_index": 374,
+          "shard_id": 10,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_374.tar.zst"
+        },
+        {
+          "entry_index": 1390,
+          "house_index": 390,
+          "shard_id": 10,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_390.tar.zst"
+        },
+        {
+          "entry_index": 1904,
+          "house_index": 5,
+          "shard_id": 14,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_5.tar.zst"
+        },
+        {
+          "entry_index": 2076,
+          "house_index": 536,
+          "shard_id": 16,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_536.tar.zst"
+        },
+        {
+          "entry_index": 2705,
+          "house_index": 676,
+          "shard_id": 21,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_676.tar.zst"
+        },
+        {
+          "entry_index": 2712,
+          "house_index": 677,
+          "shard_id": 21,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_677.tar.zst"
+        },
+        {
+          "entry_index": 2843,
+          "house_index": 709,
+          "shard_id": 22,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_709.tar.zst"
+        },
+        {
+          "entry_index": 2996,
+          "house_index": 744,
+          "shard_id": 23,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_744.tar.zst"
+        },
+        {
+          "entry_index": 3278,
+          "house_index": 811,
+          "shard_id": 25,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_811.tar.zst"
+        },
+        {
+          "entry_index": 3694,
+          "house_index": 896,
+          "shard_id": 29,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_896.tar.zst"
+        },
+        {
+          "entry_index": 3985,
+          "house_index": 96,
+          "shard_id": 31,
+          "part": 1,
+          "archive_path": "RBY1PickDataGenConfig_house_96.tar.zst"
+        },
+        {
+          "entry_index": 4161,
+          "house_index": 104,
+          "shard_id": 34,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_104.tar.zst"
+        },
+        {
+          "entry_index": 4199,
+          "house_index": 115,
+          "shard_id": 34,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_115.tar.zst"
+        },
+        {
+          "entry_index": 4343,
+          "house_index": 153,
+          "shard_id": 35,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_153.tar.zst"
+        },
+        {
+          "entry_index": 4535,
+          "house_index": 210,
+          "shard_id": 36,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_210.tar.zst"
+        },
+        {
+          "entry_index": 5100,
+          "house_index": 372,
+          "shard_id": 41,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_372.tar.zst"
+        },
+        {
+          "entry_index": 5246,
+          "house_index": 411,
+          "shard_id": 42,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_411.tar.zst"
+        },
+        {
+          "entry_index": 5353,
+          "house_index": 444,
+          "shard_id": 43,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_444.tar.zst"
+        },
+        {
+          "entry_index": 5418,
+          "house_index": 467,
+          "shard_id": 43,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_467.tar.zst"
+        },
+        {
+          "entry_index": 5625,
+          "house_index": 534,
+          "shard_id": 45,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_534.tar.zst"
+        },
+        {
+          "entry_index": 5639,
+          "house_index": 538,
+          "shard_id": 45,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_538.tar.zst"
+        },
+        {
+          "entry_index": 5728,
+          "house_index": 567,
+          "shard_id": 46,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_567.tar.zst"
+        },
+        {
+          "entry_index": 6059,
+          "house_index": 662,
+          "shard_id": 48,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_662.tar.zst"
+        },
+        {
+          "entry_index": 6115,
+          "house_index": 680,
+          "shard_id": 49,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_680.tar.zst"
+        },
+        {
+          "entry_index": 6277,
+          "house_index": 727,
+          "shard_id": 50,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_727.tar.zst"
+        },
+        {
+          "entry_index": 6558,
+          "house_index": 811,
+          "shard_id": 52,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_811.tar.zst"
+        },
+        {
+          "entry_index": 6590,
+          "house_index": 82,
+          "shard_id": 52,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_82.tar.zst"
+        },
+        {
+          "entry_index": 6714,
+          "house_index": 856,
+          "shard_id": 53,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_856.tar.zst"
+        },
+        {
+          "entry_index": 6809,
+          "house_index": 88,
+          "shard_id": 54,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_88.tar.zst"
+        },
+        {
+          "entry_index": 6876,
+          "house_index": 896,
+          "shard_id": 55,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_896.tar.zst"
+        },
+        {
+          "entry_index": 7054,
+          "house_index": 951,
+          "shard_id": 56,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_951.tar.zst"
+        },
+        {
+          "entry_index": 7227,
+          "house_index": 999,
+          "shard_id": 57,
+          "part": 2,
+          "archive_path": "RBY1PickDataGenConfig_house_999.tar.zst"
+        },
+        {
+          "entry_index": 7231,
+          "house_index": 0,
+          "shard_id": 58,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_0.tar.zst"
+        },
+        {
+          "entry_index": 7306,
+          "house_index": 103,
+          "shard_id": 58,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_103.tar.zst"
+        },
+        {
+          "entry_index": 7578,
+          "house_index": 113,
+          "shard_id": 60,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_113.tar.zst"
+        },
+        {
+          "entry_index": 7653,
+          "house_index": 116,
+          "shard_id": 60,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_116.tar.zst"
+        },
+        {
+          "entry_index": 8031,
+          "house_index": 129,
+          "shard_id": 63,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_129.tar.zst"
+        },
+        {
+          "entry_index": 8144,
+          "house_index": 133,
+          "shard_id": 64,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_133.tar.zst"
+        },
+        {
+          "entry_index": 8586,
+          "house_index": 149,
+          "shard_id": 66,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_149.tar.zst"
+        },
+        {
+          "entry_index": 8618,
+          "house_index": 15,
+          "shard_id": 67,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_15.tar.zst"
+        },
+        {
+          "entry_index": 8667,
+          "house_index": 152,
+          "shard_id": 67,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_152.tar.zst"
+        },
+        {
+          "entry_index": 8714,
+          "house_index": 154,
+          "shard_id": 67,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_154.tar.zst"
+        },
+        {
+          "entry_index": 9177,
+          "house_index": 172,
+          "shard_id": 70,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_172.tar.zst"
+        },
+        {
+          "entry_index": 9310,
+          "house_index": 177,
+          "shard_id": 71,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_177.tar.zst"
+        },
+        {
+          "entry_index": 9533,
+          "house_index": 186,
+          "shard_id": 72,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_186.tar.zst"
+        },
+        {
+          "entry_index": 9637,
+          "house_index": 189,
+          "shard_id": 73,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_189.tar.zst"
+        },
+        {
+          "entry_index": 9884,
+          "house_index": 197,
+          "shard_id": 75,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_197.tar.zst"
+        },
+        {
+          "entry_index": 10075,
+          "house_index": 204,
+          "shard_id": 76,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_204.tar.zst"
+        },
+        {
+          "entry_index": 10222,
+          "house_index": 21,
+          "shard_id": 77,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_21.tar.zst"
+        },
+        {
+          "entry_index": 10223,
+          "house_index": 210,
+          "shard_id": 77,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_210.tar.zst"
+        },
+        {
+          "entry_index": 10263,
+          "house_index": 212,
+          "shard_id": 77,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_212.tar.zst"
+        },
+        {
+          "entry_index": 10368,
+          "house_index": 216,
+          "shard_id": 78,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_216.tar.zst"
+        },
+        {
+          "entry_index": 10396,
+          "house_index": 217,
+          "shard_id": 78,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_217.tar.zst"
+        },
+        {
+          "entry_index": 10480,
+          "house_index": 221,
+          "shard_id": 78,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_221.tar.zst"
+        },
+        {
+          "entry_index": 10507,
+          "house_index": 222,
+          "shard_id": 78,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_222.tar.zst"
+        },
+        {
+          "entry_index": 10593,
+          "house_index": 225,
+          "shard_id": 79,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_225.tar.zst"
+        },
+        {
+          "entry_index": 10774,
+          "house_index": 231,
+          "shard_id": 80,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_231.tar.zst"
+        },
+        {
+          "entry_index": 10853,
+          "house_index": 234,
+          "shard_id": 80,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_234.tar.zst"
+        },
+        {
+          "entry_index": 10883,
+          "house_index": 235,
+          "shard_id": 81,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_235.tar.zst"
+        },
+        {
+          "entry_index": 11022,
+          "house_index": 240,
+          "shard_id": 82,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_240.tar.zst"
+        },
+        {
+          "entry_index": 11576,
+          "house_index": 260,
+          "shard_id": 85,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_260.tar.zst"
+        },
+        {
+          "entry_index": 11837,
+          "house_index": 27,
+          "shard_id": 86,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_27.tar.zst"
+        },
+        {
+          "entry_index": 12026,
+          "house_index": 278,
+          "shard_id": 88,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_278.tar.zst"
+        },
+        {
+          "entry_index": 12293,
+          "house_index": 288,
+          "shard_id": 89,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_288.tar.zst"
+        },
+        {
+          "entry_index": 12352,
+          "house_index": 29,
+          "shard_id": 90,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_29.tar.zst"
+        },
+        {
+          "entry_index": 12405,
+          "house_index": 292,
+          "shard_id": 90,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_292.tar.zst"
+        },
+        {
+          "entry_index": 12756,
+          "house_index": 305,
+          "shard_id": 92,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_305.tar.zst"
+        },
+        {
+          "entry_index": 13177,
+          "house_index": 322,
+          "shard_id": 95,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_322.tar.zst"
+        },
+        {
+          "entry_index": 13672,
+          "house_index": 340,
+          "shard_id": 98,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_340.tar.zst"
+        },
+        {
+          "entry_index": 13795,
+          "house_index": 344,
+          "shard_id": 98,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_344.tar.zst"
+        },
+        {
+          "entry_index": 14067,
+          "house_index": 355,
+          "shard_id": 100,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_355.tar.zst"
+        },
+        {
+          "entry_index": 14424,
+          "house_index": 367,
+          "shard_id": 102,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_367.tar.zst"
+        },
+        {
+          "entry_index": 14617,
+          "house_index": 374,
+          "shard_id": 103,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_374.tar.zst"
+        },
+        {
+          "entry_index": 14645,
+          "house_index": 375,
+          "shard_id": 104,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_375.tar.zst"
+        },
+        {
+          "entry_index": 14952,
+          "house_index": 387,
+          "shard_id": 106,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_387.tar.zst"
+        },
+        {
+          "entry_index": 14979,
+          "house_index": 388,
+          "shard_id": 106,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_388.tar.zst"
+        },
+        {
+          "entry_index": 15038,
+          "house_index": 390,
+          "shard_id": 106,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_390.tar.zst"
+        },
+        {
+          "entry_index": 15061,
+          "house_index": 391,
+          "shard_id": 106,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_391.tar.zst"
+        },
+        {
+          "entry_index": 15199,
+          "house_index": 396,
+          "shard_id": 107,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_396.tar.zst"
+        },
+        {
+          "entry_index": 15312,
+          "house_index": 40,
+          "shard_id": 108,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_40.tar.zst"
+        },
+        {
+          "entry_index": 15419,
+          "house_index": 404,
+          "shard_id": 109,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_404.tar.zst"
+        },
+        {
+          "entry_index": 15475,
+          "house_index": 406,
+          "shard_id": 109,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_406.tar.zst"
+        },
+        {
+          "entry_index": 15559,
+          "house_index": 409,
+          "shard_id": 110,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_409.tar.zst"
+        },
+        {
+          "entry_index": 15585,
+          "house_index": 410,
+          "shard_id": 110,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_410.tar.zst"
+        },
+        {
+          "entry_index": 15619,
+          "house_index": 411,
+          "shard_id": 110,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_411.tar.zst"
+        },
+        {
+          "entry_index": 15833,
+          "house_index": 42,
+          "shard_id": 111,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_42.tar.zst"
+        },
+        {
+          "entry_index": 15928,
+          "house_index": 424,
+          "shard_id": 112,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_424.tar.zst"
+        },
+        {
+          "entry_index": 16039,
+          "house_index": 428,
+          "shard_id": 113,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_428.tar.zst"
+        },
+        {
+          "entry_index": 16092,
+          "house_index": 43,
+          "shard_id": 113,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_43.tar.zst"
+        },
+        {
+          "entry_index": 16173,
+          "house_index": 433,
+          "shard_id": 114,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_433.tar.zst"
+        },
+        {
+          "entry_index": 16203,
+          "house_index": 434,
+          "shard_id": 114,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_434.tar.zst"
+        },
+        {
+          "entry_index": 16338,
+          "house_index": 44,
+          "shard_id": 115,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_44.tar.zst"
+        },
+        {
+          "entry_index": 16442,
+          "house_index": 444,
+          "shard_id": 115,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_444.tar.zst"
+        },
+        {
+          "entry_index": 16522,
+          "house_index": 447,
+          "shard_id": 116,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_447.tar.zst"
+        },
+        {
+          "entry_index": 16573,
+          "house_index": 449,
+          "shard_id": 116,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_449.tar.zst"
+        },
+        {
+          "entry_index": 16678,
+          "house_index": 453,
+          "shard_id": 117,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_453.tar.zst"
+        },
+        {
+          "entry_index": 16845,
+          "house_index": 460,
+          "shard_id": 118,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_460.tar.zst"
+        },
+        {
+          "entry_index": 17050,
+          "house_index": 468,
+          "shard_id": 119,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_468.tar.zst"
+        },
+        {
+          "entry_index": 17239,
+          "house_index": 475,
+          "shard_id": 120,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_475.tar.zst"
+        },
+        {
+          "entry_index": 17330,
+          "house_index": 478,
+          "shard_id": 121,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_478.tar.zst"
+        },
+        {
+          "entry_index": 17492,
+          "house_index": 484,
+          "shard_id": 122,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_484.tar.zst"
+        },
+        {
+          "entry_index": 17607,
+          "house_index": 489,
+          "shard_id": 122,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_489.tar.zst"
+        },
+        {
+          "entry_index": 17630,
+          "house_index": 490,
+          "shard_id": 123,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_490.tar.zst"
+        },
+        {
+          "entry_index": 17908,
+          "house_index": 501,
+          "shard_id": 124,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_501.tar.zst"
+        },
+        {
+          "entry_index": 17995,
+          "house_index": 504,
+          "shard_id": 125,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_504.tar.zst"
+        },
+        {
+          "entry_index": 18305,
+          "house_index": 516,
+          "shard_id": 127,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_516.tar.zst"
+        },
+        {
+          "entry_index": 18380,
+          "house_index": 519,
+          "shard_id": 127,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_519.tar.zst"
+        },
+        {
+          "entry_index": 18571,
+          "house_index": 526,
+          "shard_id": 128,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_526.tar.zst"
+        },
+        {
+          "entry_index": 18782,
+          "house_index": 534,
+          "shard_id": 130,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_534.tar.zst"
+        },
+        {
+          "entry_index": 18831,
+          "house_index": 536,
+          "shard_id": 130,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_536.tar.zst"
+        },
+        {
+          "entry_index": 18879,
+          "house_index": 538,
+          "shard_id": 130,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_538.tar.zst"
+        },
+        {
+          "entry_index": 19083,
+          "house_index": 546,
+          "shard_id": 132,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_546.tar.zst"
+        },
+        {
+          "entry_index": 19941,
+          "house_index": 58,
+          "shard_id": 137,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_58.tar.zst"
+        },
+        {
+          "entry_index": 19972,
+          "house_index": 581,
+          "shard_id": 137,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_581.tar.zst"
+        },
+        {
+          "entry_index": 20034,
+          "house_index": 583,
+          "shard_id": 138,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_583.tar.zst"
+        },
+        {
+          "entry_index": 20380,
+          "house_index": 597,
+          "shard_id": 140,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_597.tar.zst"
+        },
+        {
+          "entry_index": 20406,
+          "house_index": 598,
+          "shard_id": 140,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_598.tar.zst"
+        },
+        {
+          "entry_index": 20467,
+          "house_index": 601,
+          "shard_id": 140,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_601.tar.zst"
+        },
+        {
+          "entry_index": 20547,
+          "house_index": 604,
+          "shard_id": 141,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_604.tar.zst"
+        },
+        {
+          "entry_index": 20603,
+          "house_index": 606,
+          "shard_id": 141,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_606.tar.zst"
+        },
+        {
+          "entry_index": 20945,
+          "house_index": 618,
+          "shard_id": 143,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_618.tar.zst"
+        },
+        {
+          "entry_index": 21203,
+          "house_index": 628,
+          "shard_id": 145,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_628.tar.zst"
+        },
+        {
+          "entry_index": 21475,
+          "house_index": 638,
+          "shard_id": 147,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_638.tar.zst"
+        },
+        {
+          "entry_index": 21511,
+          "house_index": 639,
+          "shard_id": 147,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_639.tar.zst"
+        },
+        {
+          "entry_index": 21799,
+          "house_index": 650,
+          "shard_id": 149,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_650.tar.zst"
+        },
+        {
+          "entry_index": 21825,
+          "house_index": 651,
+          "shard_id": 149,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_651.tar.zst"
+        },
+        {
+          "entry_index": 21921,
+          "house_index": 655,
+          "shard_id": 149,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_655.tar.zst"
+        },
+        {
+          "entry_index": 22006,
+          "house_index": 659,
+          "shard_id": 150,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_659.tar.zst"
+        },
+        {
+          "entry_index": 22232,
+          "house_index": 668,
+          "shard_id": 151,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_668.tar.zst"
+        },
+        {
+          "entry_index": 22512,
+          "house_index": 678,
+          "shard_id": 153,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_678.tar.zst"
+        },
+        {
+          "entry_index": 22533,
+          "house_index": 679,
+          "shard_id": 153,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_679.tar.zst"
+        },
+        {
+          "entry_index": 22901,
+          "house_index": 694,
+          "shard_id": 155,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_694.tar.zst"
+        },
+        {
+          "entry_index": 23038,
+          "house_index": 699,
+          "shard_id": 156,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_699.tar.zst"
+        },
+        {
+          "entry_index": 23071,
+          "house_index": 700,
+          "shard_id": 156,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_700.tar.zst"
+        },
+        {
+          "entry_index": 23227,
+          "house_index": 706,
+          "shard_id": 157,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_706.tar.zst"
+        },
+        {
+          "entry_index": 23311,
+          "house_index": 709,
+          "shard_id": 158,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_709.tar.zst"
+        },
+        {
+          "entry_index": 23596,
+          "house_index": 720,
+          "shard_id": 160,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_720.tar.zst"
+        },
+        {
+          "entry_index": 23791,
+          "house_index": 727,
+          "shard_id": 161,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_727.tar.zst"
+        },
+        {
+          "entry_index": 23836,
+          "house_index": 729,
+          "shard_id": 161,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_729.tar.zst"
+        },
+        {
+          "entry_index": 23864,
+          "house_index": 73,
+          "shard_id": 162,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_73.tar.zst"
+        },
+        {
+          "entry_index": 23916,
+          "house_index": 732,
+          "shard_id": 162,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_732.tar.zst"
+        },
+        {
+          "entry_index": 24048,
+          "house_index": 737,
+          "shard_id": 163,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_737.tar.zst"
+        },
+        {
+          "entry_index": 24148,
+          "house_index": 741,
+          "shard_id": 163,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_741.tar.zst"
+        },
+        {
+          "entry_index": 24325,
+          "house_index": 748,
+          "shard_id": 164,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_748.tar.zst"
+        },
+        {
+          "entry_index": 24349,
+          "house_index": 749,
+          "shard_id": 165,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_749.tar.zst"
+        },
+        {
+          "entry_index": 24550,
+          "house_index": 757,
+          "shard_id": 166,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_757.tar.zst"
+        },
+        {
+          "entry_index": 25128,
+          "house_index": 78,
+          "shard_id": 169,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_78.tar.zst"
+        },
+        {
+          "entry_index": 25327,
+          "house_index": 788,
+          "shard_id": 171,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_788.tar.zst"
+        },
+        {
+          "entry_index": 25378,
+          "house_index": 790,
+          "shard_id": 171,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_790.tar.zst"
+        },
+        {
+          "entry_index": 25674,
+          "house_index": 803,
+          "shard_id": 173,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_803.tar.zst"
+        },
+        {
+          "entry_index": 25842,
+          "house_index": 809,
+          "shard_id": 174,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_809.tar.zst"
+        },
+        {
+          "entry_index": 26147,
+          "house_index": 821,
+          "shard_id": 175,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_821.tar.zst"
+        },
+        {
+          "entry_index": 26595,
+          "house_index": 838,
+          "shard_id": 178,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_838.tar.zst"
+        },
+        {
+          "entry_index": 26836,
+          "house_index": 847,
+          "shard_id": 180,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_847.tar.zst"
+        },
+        {
+          "entry_index": 26862,
+          "house_index": 848,
+          "shard_id": 180,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_848.tar.zst"
+        },
+        {
+          "entry_index": 26922,
+          "house_index": 85,
+          "shard_id": 180,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_85.tar.zst"
+        },
+        {
+          "entry_index": 27049,
+          "house_index": 855,
+          "shard_id": 181,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_855.tar.zst"
+        },
+        {
+          "entry_index": 27337,
+          "house_index": 866,
+          "shard_id": 183,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_866.tar.zst"
+        },
+        {
+          "entry_index": 27372,
+          "house_index": 867,
+          "shard_id": 183,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_867.tar.zst"
+        },
+        {
+          "entry_index": 27475,
+          "house_index": 871,
+          "shard_id": 184,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_871.tar.zst"
+        },
+        {
+          "entry_index": 28184,
+          "house_index": 898,
+          "shard_id": 188,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_898.tar.zst"
+        },
+        {
+          "entry_index": 28231,
+          "house_index": 900,
+          "shard_id": 189,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_900.tar.zst"
+        },
+        {
+          "entry_index": 28261,
+          "house_index": 901,
+          "shard_id": 189,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_901.tar.zst"
+        },
+        {
+          "entry_index": 28331,
+          "house_index": 904,
+          "shard_id": 189,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_904.tar.zst"
+        },
+        {
+          "entry_index": 28362,
+          "house_index": 905,
+          "shard_id": 189,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_905.tar.zst"
+        },
+        {
+          "entry_index": 28407,
+          "house_index": 907,
+          "shard_id": 190,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_907.tar.zst"
+        },
+        {
+          "entry_index": 28483,
+          "house_index": 91,
+          "shard_id": 190,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_91.tar.zst"
+        },
+        {
+          "entry_index": 28764,
+          "house_index": 920,
+          "shard_id": 192,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_920.tar.zst"
+        },
+        {
+          "entry_index": 28823,
+          "house_index": 922,
+          "shard_id": 192,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_922.tar.zst"
+        },
+        {
+          "entry_index": 28847,
+          "house_index": 923,
+          "shard_id": 193,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_923.tar.zst"
+        },
+        {
+          "entry_index": 29034,
+          "house_index": 93,
+          "shard_id": 194,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_93.tar.zst"
+        },
+        {
+          "entry_index": 29090,
+          "house_index": 932,
+          "shard_id": 194,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_932.tar.zst"
+        },
+        {
+          "entry_index": 29120,
+          "house_index": 933,
+          "shard_id": 194,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_933.tar.zst"
+        },
+        {
+          "entry_index": 29173,
+          "house_index": 935,
+          "shard_id": 194,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_935.tar.zst"
+        },
+        {
+          "entry_index": 29558,
+          "house_index": 95,
+          "shard_id": 197,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_95.tar.zst"
+        },
+        {
+          "entry_index": 30122,
+          "house_index": 971,
+          "shard_id": 200,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_971.tar.zst"
+        },
+        {
+          "entry_index": 30210,
+          "house_index": 974,
+          "shard_id": 201,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_974.tar.zst"
+        },
+        {
+          "entry_index": 30331,
+          "house_index": 979,
+          "shard_id": 202,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_979.tar.zst"
+        },
+        {
+          "entry_index": 30419,
+          "house_index": 983,
+          "shard_id": 202,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_983.tar.zst"
+        },
+        {
+          "entry_index": 30754,
+          "house_index": 995,
+          "shard_id": 204,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_995.tar.zst"
+        },
+        {
+          "entry_index": 30819,
+          "house_index": 997,
+          "shard_id": 205,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_997.tar.zst"
+        },
+        {
+          "entry_index": 30843,
+          "house_index": 998,
+          "shard_id": 205,
+          "part": 3,
+          "archive_path": "RBY1PickDataGenConfig_house_998.tar.zst"
+        }
+      ]
+    }
+  }
+}

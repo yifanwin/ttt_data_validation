@@ -1,0 +1,203 @@
+{
+  "gate": "G1",
+  "verdict": "warn",
+  "findings": [
+    "6 个 (task, stage) 桶的可检索量低于 30，这些桶上的检索可能无命中",
+    "1998/2000 个 benchmark episode 的物体类别在检索库中出现过；这是 house 级排除挡不住的语义覆盖，正式评测前需补充近重复核验"
+  ],
+  "retrieval_bank": {
+    "total": 17120,
+    "by_task": {
+      "pick_and_place": 5211,
+      "pick": 11909
+    },
+    "by_stage_trajectory_count": {
+      "pregrasp": 17120,
+      "grasp": 17119,
+      "lift": 17118,
+      "place": 5210,
+      "postplace": 5184,
+      "done": 17059
+    },
+    "by_task_stage": {
+      "pick/done": 11884,
+      "pick/grasp": 1,
+      "pick/lift": 23,
+      "pick/pregrasp": 1,
+      "pick_and_place/done": 5175,
+      "pick_and_place/lift": 1,
+      "pick_and_place/place": 26,
+      "pick_and_place/postplace": 9
+    },
+    "stage_coverage_patterns": {
+      "pregrasp/grasp/lift/done": 11884,
+      "pregrasp/grasp/lift/place/postplace/done": 5175,
+      "pregrasp/grasp/lift/place": 26,
+      "pregrasp/grasp/lift": 24,
+      "pregrasp/grasp/lift/place/postplace": 9,
+      "pregrasp": 1,
+      "pregrasp/grasp": 1
+    },
+    "buckets_below_threshold": [
+      {
+        "task": "pick_and_place",
+        "stage": "lift",
+        "count": 1
+      },
+      {
+        "task": "pick",
+        "stage": "pregrasp",
+        "count": 1
+      },
+      {
+        "task": "pick",
+        "stage": "grasp",
+        "count": 1
+      },
+      {
+        "task": "pick_and_place",
+        "stage": "postplace",
+        "count": 9
+      },
+      {
+        "task": "pick",
+        "stage": "lift",
+        "count": 23
+      },
+      {
+        "task": "pick_and_place",
+        "stage": "place",
+        "count": 26
+      }
+    ],
+    "threshold": 30
+  },
+  "leakage": {
+    "index_object_categories": 1010,
+    "benchmark_object_categories": 26,
+    "shared_object_categories": {
+      "alarmclock": {
+        "index": 24,
+        "benchmark": 4
+      },
+      "apple": {
+        "index": 89,
+        "benchmark": 63
+      },
+      "atomizer": {
+        "index": 193,
+        "benchmark": 157
+      },
+      "bottle": {
+        "index": 58,
+        "benchmark": 133
+      },
+      "butterknife": {
+        "index": 178,
+        "benchmark": 130
+      },
+      "candle": {
+        "index": 54,
+        "benchmark": 157
+      },
+      "cellulartelephone": {
+        "index": 164,
+        "benchmark": 1
+      },
+      "cup": {
+        "index": 1161,
+        "benchmark": 157
+      },
+      "egg": {
+        "index": 114,
+        "benchmark": 74
+      },
+      "fork": {
+        "index": 265,
+        "benchmark": 88
+      },
+      "irishpotato": {
+        "index": 139,
+        "benchmark": 156
+      },
+      "knife": {
+        "index": 187,
+        "benchmark": 1
+      },
+      "ladle": {
+        "index": 185,
+        "benchmark": 3
+      },
+      "mug": {
+        "index": 1686,
+        "benchmark": 191
+      },
+      "papertowel": {
+        "index": 100,
+        "benchmark": 113
+      },
+      "pen": {
+        "index": 167,
+        "benchmark": 35
+      },
+      "pencil": {
+        "index": 61,
+        "benchmark": 2
+      },
+      "peppershaker": {
+        "index": 236,
+        "benchmark": 87
+      },
+      "remotecontrol": {
+        "index": 834,
+        "benchmark": 210
+      },
+      "saltshaker": {
+        "index": 192,
+        "benchmark": 92
+      },
+      "soapdispenser": {
+        "index": 307,
+        "benchmark": 55
+      },
+      "spatula": {
+        "index": 136,
+        "benchmark": 8
+      },
+      "spoon": {
+        "index": 80,
+        "benchmark": 35
+      },
+      "tomato": {
+        "index": 29,
+        "benchmark": 22
+      },
+      "winebottle": {
+        "index": 15,
+        "benchmark": 24
+      }
+    },
+    "shared_target_categories": {
+      "place": {
+        "index": 5211,
+        "benchmark": 2000
+      }
+    },
+    "exact_instruction_matches": 0,
+    "exact_instruction_examples": [],
+    "benchmark_episodes_with_object_category_present_in_index": 1998,
+    "benchmark_episode_total": 2000,
+    "note": "object/target/instruction 语义重合是 house 级排除挡不住的部分。精确 instruction 命中数为 0 不代表无近重复，只说明文本未逐字相同。"
+  },
+  "malformed_benchmark_instructions": {
+    "count": 0,
+    "examples": []
+  },
+  "house_level_exclusion": {
+    "benchmark_houses": 648,
+    "index_houses": 7580,
+    "overlap_count": 0,
+    "overlap_houses": [],
+    "exclusions_artifact_rule": "exclude source archive entries whose house_index is in benchmark house set; conservative house-level holdout"
+  }
+}

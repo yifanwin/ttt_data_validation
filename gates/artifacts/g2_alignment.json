@@ -1,0 +1,117 @@
+{
+  "gate": "G2",
+  "verdict": "warn",
+  "findings": [
+    "action 归一化有 2 个量纲异常维（dim [10, 18]），与正常维的梯度权重比约 5.0e-04",
+    "horizon 口径：训练 chunk=16 步，rollout 每 chunk 只执行 8 步。TTT 的 loss 若覆盖全部 16 步，会把容量花在被丢弃的后 8 步上。建议首版显式对齐到 8 步（加权或 mask 后半段）。",
+    "benchmark 相机名与离线相机名不一致：['camera_follower']",
+    "判据口径：end_on_success 默认 False，必须显式设为 True"
+  ],
+  "dimensions": {
+    "observed": {
+      "action_dim": 20,
+      "action_horizon": 16,
+      "n_action_steps": 8,
+      "n_obs_steps": 1
+    },
+    "mismatches": {},
+    "sample_shape_mismatches": [],
+    "horizon_alignment_note": "训练 chunk=16 步，rollout 每 chunk 只执行 8 步。TTT 的 loss 若覆盖全部 16 步，会把容量花在被丢弃的后 8 步上。建议首版显式对齐到 8 步（加权或 mask 后半段）。"
+  },
+  "normalization": {
+    "action_norm_mode": "quantiles",
+    "state_norm_mode": "min_max",
+    "quantile_outlier_dims": [
+      {
+        "dim": 10,
+        "q01": -100.0,
+        "q99": 100.0,
+        "span": 200.0,
+        "relative_weight": 0.005
+      },
+      {
+        "dim": 18,
+        "q01": -100.0,
+        "q99": 100.0,
+        "span": 200.0,
+        "relative_weight": 0.005
+      }
+    ],
+    "median_normal_span": 0.10000000149011612,
+    "gradient_weight_ratio_outlier_vs_normal": 0.0005000000074505806,
+    "roundtrip_checks": [
+      {
+        "dataset": "RBY1PickAndPlaceDataGenConfig",
+        "action_roundtrip_max_abs_error": 5.960464477539063e-08,
+        "state_roundtrip_max_abs_error": 0.0,
+        "ok": true
+      },
+      {
+        "dataset": "RBY1PickDataGenConfig",
+        "action_roundtrip_max_abs_error": 0.0,
+        "state_roundtrip_max_abs_error": 0.0,
+        "ok": true
+      }
+    ],
+    "note": "默认 MSE 会让量纲异常的维度在 loss 中的有效权重与正常关节维相差数个数量级；quantiles 模式还会把 OOD 动作 clip 到 ±1，静默截断梯度。建议至少把逐维 loss 分量记入日志。"
+  },
+  "cameras": {
+    "checkpoint_image_config": {
+      "max_images": 5,
+      "max_crops": 8,
+      "crop_mode": "resize"
+    },
+    "offline_camera_names": [
+      "wrist_camera_r",
+      "head_camera",
+      "wrist_camera_l"
+    ],
+    "offline_frame_shapes": [
+      [
+        480,
+        640,
+        3
+      ]
+    ],
+    "benchmark_camera_names": [
+      "camera_follower",
+      "head_camera",
+      "wrist_camera_l",
+      "wrist_camera_r"
+    ],
+    "benchmark_img_resolution": [
+      [
+        640,
+        480
+      ]
+    ],
+    "benchmark_record_depth": [
+      false
+    ],
+    "shared_camera_names": [
+      "head_camera",
+      "wrist_camera_l",
+      "wrist_camera_r"
+    ],
+    "camera_name_mismatch": [
+      "camera_follower"
+    ],
+    "resolution_mismatch": true,
+    "note": "benchmark JSON 记录的相机（640×480、record_depth=false）会覆盖 config 的相机设置；MolmoBot 训练用 RBY1GoProD455CameraSystem 1024×576。两地口径若不一致，TTT 学到的动作映射会建立在与 rollout 不同的视觉输入上，表现为『检索正确但动作不兼容』。执行前必须实跑核对一次。"
+  },
+  "success_criteria": {
+    "default_end_on_success": false,
+    "default_defined_at": "molmo_spaces/configs/abstract_exp_config.py:53",
+    "required_value": true,
+    "why": "end_on_success=False 时 rollout 跑满 task_horizon，judge_success() 只在循环结束后用末态判定一次，过程中曾经成功的会被判为失败。同 benchmark 的 E2 run 因此低估 2.1 倍（2.67% vs 5.61%）。TTT 最可能的收益形式是『更早成功』，用错这个开关会把收益方向掩盖。",
+    "verdict": "fail"
+  },
+  "instruction_source": {
+    "online_instruction_field": "benchmark language.task_description（经 obs['task'] 传入策略）",
+    "offline_instruction_field": "obs_scene.task_description",
+    "benchmark_empty_instructions": 0,
+    "malformed_count": 0,
+    "malformed_examples": [],
+    "note": "检索以 instruction 为键，畸形 instruction 会导致检索无命中或命中错误 clip，会被误读为该批数据覆盖不足。建议隔离这些 episode 并记录数量。"
+  }
+}

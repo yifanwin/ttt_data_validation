@@ -1,0 +1,225 @@
+{
+  "checkpoint_config": "/data0/wenyifan/MoMaTrajGen/nas_wenyifan/models/MolmoBot-RBY1Multitask/config.yaml",
+  "model_specs": {
+    "action_dim": 20,
+    "action_horizon": 16,
+    "n_action_steps": 8,
+    "n_obs_steps": 1
+  },
+  "samples": [
+    {
+      "dataset": "RBY1PickAndPlaceDataGenConfig",
+      "archive": "RBY1PickAndPlaceDataGenConfig_house_33536.tar.zst",
+      "h5_members": [
+        "house_33536/trajectories_batch_14_of_20.h5"
+      ],
+      "sample_keys": [
+        "action",
+        "action_is_pad",
+        "answers",
+        "image",
+        "metadata",
+        "question",
+        "state",
+        "style"
+      ],
+      "processed_keys": [
+        "action_is_pad",
+        "actions",
+        "images",
+        "input_tokens",
+        "loss_masks",
+        "metadata",
+        "position_ids",
+        "states",
+        "target_tokens",
+        "token_pooling"
+      ],
+      "batch_keys": [
+        "action_is_pad",
+        "actions",
+        "images",
+        "input_ids",
+        "labels",
+        "loss_masks",
+        "position_ids",
+        "states",
+        "token_pooling"
+      ],
+      "batch_action_shape": [
+        1,
+        16,
+        20
+      ],
+      "batch_state_shape": [
+        1,
+        22
+      ],
+      "camera_shapes": [
+        [
+          480,
+          640,
+          3
+        ],
+        [
+          480,
+          640,
+          3
+        ],
+        [
+          480,
+          640,
+          3
+        ]
+      ],
+      "action_shape": [
+        16,
+        20
+      ],
+      "state_shape": [
+        22
+      ],
+      "action_is_pad_count": 0,
+      "instruction": "Pick up the metal clamp with orange grips and place it in or on the gray bowl",
+      "action_roundtrip_max_abs_error": 5.960464477539063e-08,
+      "state_roundtrip_max_abs_error": 0.0,
+      "raw_action_min_max": [
+        -0.0500030517578125,
+        100.0
+      ],
+      "normalized_action_min_max": [
+        -0.9102796912193298,
+        1.0
+      ],
+      "sample_metadata": {
+        "traj_index": 0,
+        "step": 95,
+        "traj_idx": 0,
+        "split": "train",
+        "repo_id": "synthmanip",
+        "answers": "",
+        "image_group_size": [
+          [
+            640,
+            480
+          ],
+          [
+            640,
+            480
+          ],
+          [
+            640,
+            480
+          ]
+        ]
+      }
+    },
+    {
+      "dataset": "RBY1PickDataGenConfig",
+      "archive": "RBY1PickDataGenConfig_house_10092.tar.zst",
+      "h5_members": [
+        "house_10092/trajectories_batch_4_of_20.h5"
+      ],
+      "sample_keys": [
+        "action",
+        "action_is_pad",
+        "answers",
+        "image",
+        "metadata",
+        "question",
+        "state",
+        "style"
+      ],
+      "processed_keys": [
+        "action_is_pad",
+        "actions",
+        "images",
+        "input_tokens",
+        "loss_masks",
+        "metadata",
+        "position_ids",
+        "states",
+        "target_tokens",
+        "token_pooling"
+      ],
+      "batch_keys": [
+        "action_is_pad",
+        "actions",
+        "images",
+        "input_ids",
+        "labels",
+        "loss_masks",
+        "position_ids",
+        "states",
+        "token_pooling"
+      ],
+      "batch_action_shape": [
+        1,
+        16,
+        20
+      ],
+      "batch_state_shape": [
+        1,
+        22
+      ],
+      "camera_shapes": [
+        [
+          480,
+          640,
+          3
+        ],
+        [
+          480,
+          640,
+          3
+        ],
+        [
+          480,
+          640,
+          3
+        ]
+      ],
+      "action_shape": [
+        16,
+        20
+      ],
+      "state_shape": [
+        22
+      ],
+      "action_is_pad_count": 0,
+      "instruction": "Pick up the white candle",
+      "action_roundtrip_max_abs_error": 0.0,
+      "state_roundtrip_max_abs_error": 0.0,
+      "raw_action_min_max": [
+        -100.0,
+        0.03981306776404381
+      ],
+      "normalized_action_min_max": [
+        -1.0,
+        0.7962613105773926
+      ],
+      "sample_metadata": {
+        "traj_index": 0,
+        "step": 56,
+        "traj_idx": 0,
+        "split": "train",
+        "repo_id": "synthmanip",
+        "answers": "",
+        "image_group_size": [
+          [
+            640,
+            480
+          ],
+          [
+            640,
+            480
+          ],
+          [
+            640,
+            480
+          ]
+        ]
+      }
+    }
+  ]
+}

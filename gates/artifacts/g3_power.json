@@ -1,0 +1,249 @@
+{
+  "gate": "G3",
+  "verdict": "warn",
+  "findings": [
+    "检出 2.0× 效应（10.62% → 21.24%）在配对设计下需 133 episode",
+    "现有历史基线 226 episode 的 95% CI 为 [7.24%, 15.31%]，宽度约 8.1 个百分点",
+    "626 个 episode 的物体类别无历史基线，分层时归入 unknown"
+  ],
+  "recommended_episodes": 150,
+  "power": {
+    "baseline": {
+      "success": 24,
+      "total": 226,
+      "rate": 0.1062,
+      "wilson_ci_95": [
+        0.0724,
+        0.1531
+      ]
+    },
+    "alpha": 0.05,
+    "power": 0.8,
+    "assumed_discordance": 0.5,
+    "rows": [
+      {
+        "effect_multiplier": 1.5,
+        "target_rate": 0.1593,
+        "abs_gain_pp": 5.31,
+        "paired_episodes_needed": 529,
+        "independent_episodes_per_group": 640,
+        "paired_efficiency_gain": 1.21
+      },
+      {
+        "effect_multiplier": 2.0,
+        "target_rate": 0.2124,
+        "abs_gain_pp": 10.62,
+        "paired_episodes_needed": 133,
+        "independent_episodes_per_group": 186,
+        "paired_efficiency_gain": 1.4
+      },
+      {
+        "effect_multiplier": 2.5,
+        "target_rate": 0.2655,
+        "abs_gain_pp": 15.93,
+        "paired_episodes_needed": 59,
+        "independent_episodes_per_group": 93,
+        "paired_efficiency_gain": 1.58
+      }
+    ],
+    "note": "配对设计假设不一致对占比 0.5。实际不一致对越少，所需 episode 越多。独立设计数字给出对照，说明为什么必须配对（同一批 episode 跑所有条件）。"
+  },
+  "stratification": {
+    "pooled_rate": 0.184,
+    "pooled_variance": 0.1502,
+    "layers": {
+      "high": {
+        "episodes": 579,
+        "categories": [
+          "candle",
+          "cup",
+          "egg",
+          "mug"
+        ],
+        "category_count": 4,
+        "approx_rate": 0.353,
+        "bernoulli_variance": 0.2284
+      },
+      "mid": {
+        "episodes": 299,
+        "categories": [
+          "bottle",
+          "peppershaker",
+          "soapdispenser",
+          "winebottle"
+        ],
+        "category_count": 4,
+        "approx_rate": 0.127,
+        "bernoulli_variance": 0.1108
+      },
+      "low": {
+        "episodes": 496,
+        "categories": [
+          "butterknife",
+          "potato",
+          "remotecontrol"
+        ],
+        "category_count": 3,
+        "approx_rate": 0.0212,
+        "bernoulli_variance": 0.0207
+      }
+    },
+    "unknown_category_episodes": 626,
+    "isolated_malformed_episodes": 0,
+    "isolated_malformed_houses": [],
+    "note": "把 0% 类别与 71% 类别混在一起会放大方差。分层抽样可降方差，但分层方案必须与基线口径一致，否则成功率变化可能只反映类别配比变动。"
+  },
+  "budget": {
+    "per_episode_sec_reference": 190.0,
+    "ttt_overhead_ratio_assumed": 0.15,
+    "rows": [
+      {
+        "episodes": 100,
+        "workers": 1,
+        "baseline_hours": 5.28,
+        "with_ttt_hours": 6.07,
+        "four_conditions_hours": 23.49
+      },
+      {
+        "episodes": 100,
+        "workers": 2,
+        "baseline_hours": 2.64,
+        "with_ttt_hours": 3.03,
+        "four_conditions_hours": 11.74
+      },
+      {
+        "episodes": 100,
+        "workers": 4,
+        "baseline_hours": 1.32,
+        "with_ttt_hours": 1.52,
+        "four_conditions_hours": 5.87
+      },
+      {
+        "episodes": 100,
+        "workers": 8,
+        "baseline_hours": 0.66,
+        "with_ttt_hours": 0.76,
+        "four_conditions_hours": 2.94
+      },
+      {
+        "episodes": 150,
+        "workers": 1,
+        "baseline_hours": 7.92,
+        "with_ttt_hours": 9.1,
+        "four_conditions_hours": 35.23
+      },
+      {
+        "episodes": 150,
+        "workers": 2,
+        "baseline_hours": 3.96,
+        "with_ttt_hours": 4.55,
+        "four_conditions_hours": 17.61
+      },
+      {
+        "episodes": 150,
+        "workers": 4,
+        "baseline_hours": 1.98,
+        "with_ttt_hours": 2.28,
+        "four_conditions_hours": 8.81
+      },
+      {
+        "episodes": 150,
+        "workers": 8,
+        "baseline_hours": 0.99,
+        "with_ttt_hours": 1.14,
+        "four_conditions_hours": 4.4
+      },
+      {
+        "episodes": 226,
+        "workers": 1,
+        "baseline_hours": 11.93,
+        "with_ttt_hours": 13.72,
+        "four_conditions_hours": 53.08
+      },
+      {
+        "episodes": 226,
+        "workers": 2,
+        "baseline_hours": 5.96,
+        "with_ttt_hours": 6.86,
+        "four_conditions_hours": 26.54
+      },
+      {
+        "episodes": 226,
+        "workers": 4,
+        "baseline_hours": 2.98,
+        "with_ttt_hours": 3.43,
+        "four_conditions_hours": 13.27
+      },
+      {
+        "episodes": 226,
+        "workers": 8,
+        "baseline_hours": 1.49,
+        "with_ttt_hours": 1.71,
+        "four_conditions_hours": 6.63
+      },
+      {
+        "episodes": 300,
+        "workers": 1,
+        "baseline_hours": 15.83,
+        "with_ttt_hours": 18.21,
+        "four_conditions_hours": 70.46
+      },
+      {
+        "episodes": 300,
+        "workers": 2,
+        "baseline_hours": 7.92,
+        "with_ttt_hours": 9.1,
+        "four_conditions_hours": 35.23
+      },
+      {
+        "episodes": 300,
+        "workers": 4,
+        "baseline_hours": 3.96,
+        "with_ttt_hours": 4.55,
+        "four_conditions_hours": 17.61
+      },
+      {
+        "episodes": 300,
+        "workers": 8,
+        "baseline_hours": 1.98,
+        "with_ttt_hours": 2.28,
+        "four_conditions_hours": 8.81
+      },
+      {
+        "episodes": 400,
+        "workers": 1,
+        "baseline_hours": 21.11,
+        "with_ttt_hours": 24.28,
+        "four_conditions_hours": 93.94
+      },
+      {
+        "episodes": 400,
+        "workers": 2,
+        "baseline_hours": 10.56,
+        "with_ttt_hours": 12.14,
+        "four_conditions_hours": 46.97
+      },
+      {
+        "episodes": 400,
+        "workers": 4,
+        "baseline_hours": 5.28,
+        "with_ttt_hours": 6.07,
+        "four_conditions_hours": 23.49
+      },
+      {
+        "episodes": 400,
+        "workers": 8,
+        "baseline_hours": 2.64,
+        "with_ttt_hours": 3.03,
+        "four_conditions_hours": 11.74
+      }
+    ],
+    "conditions": [
+      "no_ttt",
+      "random_ttt",
+      "retrieved_ttt",
+      "shuffled_instruction_ttt"
+    ],
+    "note": "190 s/episode 来自历史基线实测（场景重建 15–60 s + rollout 2:00–3:10 + 保存 10–40 s）。TTT 开销比例是粗估，需在 G4 冒烟后用实测替换。"
+  }
+}

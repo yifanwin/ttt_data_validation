@@ -1,0 +1,72 @@
+{
+  "gate": "G4",
+  "target_episode": {
+    "idx": 24,
+    "house_index": 107,
+    "task_description": "pick up the brown egg and place it on the bowl.",
+    "pickup_obj_name": "egg_ab1e6b2ddd5b7baaf103230e82ce5f20_1_0_6",
+    "episode_length": 224
+  },
+  "scene_assets": {
+    "scene_dir": "/data0/wenyifan/MoMaTrajGen/molmospaces_data/assets/scenes/procthor-10k-val",
+    "house_index": 107,
+    "files": {
+      "json": {
+        "path": "/data0/wenyifan/MoMaTrajGen/molmospaces_data/assets/scenes/procthor-10k-val/val_107.json",
+        "exists": true
+      },
+      "xml": {
+        "path": "/data0/wenyifan/MoMaTrajGen/molmospaces_data/assets/scenes/procthor-10k-val/val_107.xml",
+        "exists": true
+      },
+      "ceiling_xml": {
+        "path": "/data0/wenyifan/MoMaTrajGen/molmospaces_data/assets/scenes/procthor-10k-val/val_107_ceiling.xml",
+        "exists": true
+      },
+      "assets_dir": {
+        "path": "/data0/wenyifan/MoMaTrajGen/molmospaces_data/assets/scenes/procthor-10k-val/val_107_assets",
+        "exists": true
+      }
+    },
+    "all_present": true,
+    "known_missing_in_snapshot": false
+  },
+  "command": [
+    "/data0/wenyifan/MoMaTrajGen/MolmoBot/MolmoBot/.venv/bin/python",
+    "/data0/wenyifan/MoMaTrajGen/MolmoBot/MolmoBot/launch_scripts/run_eval.py",
+    "--benchmark_path",
+    "/data0/wenyifan/MoMaTrajGen/molmospaces_data/assets/benchmarks/molmospaces-bench-v1/procthor-10k/RBY1PickAndPlaceDataGenConfig/RBY1PickAndPlaceDataGenConfig_20260209_json_benchmark",
+    "--eval_config_cls",
+    "g4_eval_configs:G4MolmoBotRBY1PickPnPEvalConfig",
+    "--checkpoint_path",
+    "/data0/wenyifan/MoMaTrajGen/nas_wenyifan/models/MolmoBot-RBY1Multitask",
+    "--task_horizon",
+    "400",
+    "--num_workers",
+    "1",
+    "--episode_idx",
+    "24",
+    "--output_dir",
+    "/data0/wenyifan/MoMaTrajGen/ttt_data_validation/gates/artifacts/g4_smoke"
+  ],
+  "eval_config_cls": "g4_eval_configs:G4MolmoBotRBY1PickPnPEvalConfig",
+  "timeout_sec": 900,
+  "mode": "executed",
+  "verdict": "pass",
+  "findings": [
+    "链路走通：0/1 成功，耗时 494s"
+  ],
+  "elapsed_sec": 493.8,
+  "timed_out": false,
+  "returncode": 0,
+  "outcome": {
+    "success_count": 0,
+    "total_count": 1,
+    "success_rate": 0.0,
+    "log_files": [
+      "/data0/wenyifan/MoMaTrajGen/ttt_data_validation/gates/artifacts/g4_smoke/G4MolmoBotRBY1PickPnPEvalConfig/20260930_140133/running_log.log"
+    ]
+  },
+  "stdout_tail": "Failed to import mujoco_warp: No module named 'warp.context'\nUsing SCENES_ROOT: /data0/wenyifan/MoMaTrajGen/MolmoBot/MolmoBot/.venv/lib/python3.11/site-packages/assets/scenes\nResults saved to: /data0/wenyifan/MoMaTrajGen/ttt_data_validation/gates/artifacts/g4_smoke/G4MolmoBotRBY1PickPnPEvalConfig/20260930_140133\nSuccess: 0/1 (0.0%)\nhouse_107/ep0: fail\n",
+  "stderr_tail": "[0m\u001b[0m \u001b[1;32mINFO\u001b[0m camera_manager.py:510] [CAMERA SETUP] Set up robot-mounted camera 'wrist_camera_l'\n[\u001b[1m09/30 14:06:03 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m camera_manager.py:510] [CAMERA SETUP] Set up robot-mounted camera 'wrist_camera_r'\n[\u001b[1m09/30 14:06:03 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m camera_manager.py:510] [CAMERA SETUP] Set up robot-mounted camera 'camera_follower'\n[\u001b[1m09/30 14:06:03 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m camera_manager.py:326] [CAMERA SETUP] Successfully set up 4 cameras\n[\u001b[1m09/30 14:06:03 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m task_sampler.py:1136] Sampled task 'Pick up the smooth brown egg and place it in or on the matte dark gray bowl'\n[\u001b[1m09/30 14:06:03 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:972] Worker 0 house 107 episode 0/1 collected=0/1\n[\u001b[1m09/30 14:06:04 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;33mWARNING\u001b[0m sensors.py:1071] Policy <class 'olmo.eval.configure_molmo_spaces.MolmoBotRBY1MultitaskPolicy'> does not support tracking retries.\nINFO:olmo.eval.configure_molmo_spaces:Observation keys: ['sensor_param_head_camera', 'head_camera', 'sensor_param_wrist_camera_l', 'wrist_camera_l', 'sensor_param_wrist_camera_r', 'wrist_camera_r', 'sensor_param_camera_follower', 'camera_follower', 'qpos', 'qvel', 'tcp_pose', 'robot_base_pose', 'env_states', 'obj_start_pose', 'obj_end_pose', 'grasp_state_pickup_obj', 'grasp_state_place_receptacle', 'rby1_left_grasp_state', 'rby1_right_grasp_state', 'task_info', 'grasp_pose', 'policy_phase', 'policy_num_retries', 'actions/commanded_action', 'actions/joint_pos', 'actions/joint_pos_rel', 'actions/ee_twist', 'actions/ee_pose', 'object_image_points', 'robot_state', 'object_poses']\nINFO:olmo.eval.configure_molmo_spaces:  qpos keys: ['base', 'torso', 'left_arm', 'right_arm', 'left_gripper', 'right_gripper', 'head']\n/data0/wenyifan/MoMaTrajGen/MolmoBot/MolmoBot/.venv/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4314.)\n  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]\n[\u001b[1m09/30 14:06:07 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;33mWARNING\u001b[0m task.py:309] Camera sensor 'head_camera' observation mismatch between reset and first step. Overwriting cached observation with current state.\n[\u001b[1m09/30 14:08:07 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:1036] Worker 0 house 107 episode 0 object egg_ab1e6b2ddd5b7baaf103230e82ce5f20_1_0_6 completed with success=False\n[\u001b[1m09/30 14:08:07 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m save_utils.py:295] Preparing episode data: 401 timesteps\n[\u001b[1m09/30 14:08:41 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:214] Batching and saving trajectory data for house_107: 1 episodes\n[\u001b[1m09/30 14:08:42 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;33mWARNING\u001b[0m save_utils.py:670] No terminated recorded, assuming episode ended\n[\u001b[1m09/30 14:08:42 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m save_utils.py:714] Saved 1 episodes to: /data0/wenyifan/MoMaTrajGen/ttt_data_validation/gates/artifacts/g4_smoke/G4MolmoBotRBY1PickPnPEvalConfig/20260930_140133/house_107\n[\u001b[1m09/30 14:08:42 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:264] Successfully saved trajectory data for house_107 in 0.10s (batch: 0.00s, save: 0.10s)\n[\u001b[1m09/30 14:08:42 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;33mWARNING\u001b[0m pipeline.py:210] No trajectory data to save for house_107\n[\u001b[1m09/30 14:08:42 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:1181] Worker 0 completed house 107: 0/1 successful episodes\n[\u001b[1m09/30 14:08:42 \u001b[1;37mWorker 0\u001b[0m\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:471] Worker 0 completed processing assigned houses\n[\u001b[1m09/30 14:08:43\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:1346] Completed 1 houses, skipped 0 houses\n[\u001b[1m09/30 14:08:43\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:1349] Success count: 0, Total count: 1\n[\u001b[1m09/30 14:08:43\u001b[0m \u001b[1;32mINFO\u001b[0m pipeline.py:1350] Success rate: 0.00%\n"
+}

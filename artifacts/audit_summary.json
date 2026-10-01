@@ -1,0 +1,45 @@
+{
+  "source_snapshot_utc": "2026-09-30T04:38:49.897277+00:00",
+  "benchmark_episodes": 2000,
+  "benchmark_houses": 648,
+  "datasets": {
+    "RBY1PickAndPlaceDataGenConfig": {
+      "total_house_entries": 9911,
+      "snapshot_house_entries": 3248,
+      "scanned_house_entries": 3248,
+      "unavailable_house_entries": 6663,
+      "total_houses": 9318,
+      "benchmark_overlap_houses": 78,
+      "counts": {
+        "ok": 3248,
+        "trajectories": 5573,
+        "terminal_success": 5573,
+        "eligible": 5211,
+        "excluded_benchmark_house": 42,
+        "invalid_mask": 323,
+        "success_nonterminal_only": 0,
+        "missing_instruction": 0,
+        "exact_h5_traj_duplicate": 0
+      }
+    },
+    "RBY1PickDataGenConfig": {
+      "total_house_entries": 30892,
+      "snapshot_house_entries": 5321,
+      "scanned_house_entries": 5321,
+      "unavailable_house_entries": 25571,
+      "total_houses": 28115,
+      "benchmark_overlap_houses": 173,
+      "counts": {
+        "ok": 5321,
+        "trajectories": 13299,
+        "terminal_success": 13299,
+        "eligible": 11909,
+        "excluded_benchmark_house": 68,
+        "invalid_mask": 1328,
+        "success_nonterminal_only": 0,
+        "missing_instruction": 0,
+        "exact_h5_traj_duplicate": 0
+      }
+    }
+  }
+}
